@@ -19,6 +19,7 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "arrow-parens": "off",
     "camelcase": "off",
     "class-methods-use-this": "off",
     "prettier/prettier": "error",

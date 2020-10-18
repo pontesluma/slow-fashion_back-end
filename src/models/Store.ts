@@ -1,4 +1,11 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToMany,
+  JoinColumn,
+} from 'typeorm';
+import Image from './Image';
 
 @Entity('stores')
 export default class Store {
@@ -22,4 +29,10 @@ export default class Store {
 
   @Column()
   opening_hours: string;
+
+  @OneToMany(() => Image, image => image.stores, {
+    cascade: ['insert', 'update'],
+  })
+  @JoinColumn({ name: 'store_id' })
+  images: Image[];
 }
