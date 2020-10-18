@@ -1,4 +1,5 @@
 import express from 'express';
+import './database/conection';
 
 import routes from './routes';
 
