@@ -17,7 +17,7 @@ export default class Store {
   @Column()
   about: string;
 
-  @Column()
+  @Column({ array: true })
   contact: string;
 
   @Column()
