@@ -13,9 +13,9 @@ export default class Image {
   id: number;
 
   @Column()
-  name: string;
+  path: string;
 
   @ManyToOne(() => Store, store => store.images)
   @JoinColumn({ name: 'store_id' })
-  stores: Store;
+  store: Store;
 }

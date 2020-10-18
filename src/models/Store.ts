@@ -30,7 +30,7 @@ export default class Store {
   @Column()
   opening_hours: string;
 
-  @OneToMany(() => Image, image => image.stores, {
+  @OneToMany(() => Image, image => image.store, {
     cascade: ['insert', 'update'],
   })
   @JoinColumn({ name: 'store_id' })
