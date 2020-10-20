@@ -41,8 +41,8 @@ export default class StoreController implements IStoreController {
       name: Yup.string().required(),
       latitude: Yup.number().required(),
       longitude: Yup.number().required(),
-      about: Yup.string().required().max(300),
-      contact: Yup.array(Yup.string()),
+      about: Yup.string().max(300),
+      contact: Yup.string(),
       opening_hours: Yup.string(),
       images: Yup.array(
         Yup.object().shape({
